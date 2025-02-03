@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    
+
+
+    <nav>
+        <div class="logo">
+          <img src="assets/Logo64x64.png" alt="logo" />
+          <h1>LOGO</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About Us</a>
+          </li>
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+          <li>
+            <a href="./blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact Us</a>
+          </li>
+          <li>
+              <a href="./portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="./careers.html">Careers</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        <ul>
+          <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./about.html">About Us</a>
+            </li>
+            <li>
+              <a href="./services.html">Services</a>
+            </li>
+            <li>
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li>
+                <a href="./portfolio.html">Portfolio</a>
+              </li>
+              <li>
+                <a href="./careers.html">Careers</a>
+              </li>
+        </ul>
+      </div>
+  
+  
+      <script >
+  
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          const mobileNav = document.querySelector(".hamburger");
+          const navbar = document.querySelector(".menubar");
+      
+          const toggleNav = () => {
+              navbar.classList.toggle("active");
+              mobileNav.classList.toggle("hamburger-active");
+          };
+      
+          mobileNav.addEventListener("click", toggleNav);
+      });
+      
+      </script>
+
+
+
+      <section class="contact-banner">
+        <div class="contact-banner-container">
+            <h1>Get in Touch</h1>
+            <p>We’re here to help! Reach out to us for any inquiries, collaborations, or support.</p>
+            <a href="#contact-form" class="contact-btn">Contact Us</a>
+        </div>
+    </section>
+    
+
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- Inquiry Form -->
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <p id="form-status"></p>
+            </div>
+    
+            <!-- Google Map -->
+            <div class="contact-map">
+                <h2>Find Us Here</h2>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509364!2d144.95592531568502!3d-37.8172097420146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df29dff0d%3A0x5045675218ce7e33!2sMelbourne%2C%20VIC%20Australia!5e0!3m2!1sen!2sin!4v1649851222892!5m2!1sen!2sin" 
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section class="contact-info-section">
+        <div class="contact-info-container">
+            <div class="faq-container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq">
+                    <div class="faq-item">
+                        <button class="faq-question">How can I contact customer support? <span>+</span></button>
+                        <div class="faq-answer">You can reach out via email or through our contact form.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What are your business hours? <span>+</span></button>
+                        <div class="faq-answer">We are available Monday to Friday from 9 AM to 6 PM.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you offer online consultations? <span>+</span></button>
+                        <div class="faq-answer">Yes! You can schedule a meeting through our contact form.</div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="social-container">
+                <h2>Connect With Us</h2>
+                <p>Follow us on social media to stay updated with our latest news and updates.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const faqs = document.querySelectorAll(".faq-question");
+    
+        faqs.forEach((faq) => {
+            faq.addEventListener("click", function () {
+                // Close all other FAQ answers
+                document.querySelectorAll(".faq-answer").forEach((answer) => {
+                    if (answer !== this.nextElementSibling) {
+                        answer.style.display = "none";
+                    }
+                });
+    
+                // Toggle the clicked FAQ answer
+                this.nextElementSibling.style.display = 
+                    this.nextElementSibling.style.display === "block" ? "none" : "block";
+    
+                // Reset all other FAQ icons
+                document.querySelectorAll(".faq-question span").forEach((span) => {
+                    span.textContent = "+";
+                });
+    
+                // Change icon for active FAQ
+                this.querySelector("span").textContent = 
+                    this.nextElementSibling.style.display === "block" ? "−" : "+";
+            });
+        });
+    });
+    
+</script>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-box">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to providing the best solutions for your business, focusing on innovation and excellence.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+      
+                <!-- Quick Links -->
+                <div class="footer-box">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Services -->
+                <div class="footer-box">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Contact -->
+                <div class="footer-box">
+                    <h3>Contact Us</h3>
+                    <p>📍 123 Street, City, Country</p>
+                    <p>📞 +123 456 7890</p>
+                    <p>📧 info@example.com</p>
+                </div>
+            </div>
+      
+            <!-- Copyright & Scroll to Top -->
+            <div class="footer-bottom">
+                <p>© 2025 Your Company. All rights reserved.</p>
+                <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const scrollTopBtn = document.querySelector(".scroll-top");
+      
+          scrollTopBtn.addEventListener("click", function () {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+      });
+      
+      </script>
+</body>
+</html>

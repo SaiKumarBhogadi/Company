@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    
+
+    <nav>
+        <div class="logo">
+          <img src="assets/Logo64x64.png" alt="logo" />
+          <h1>LOGO</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About Us</a>
+          </li>
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+          <li>
+            <a href="./blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact Us</a>
+          </li>
+          <li>
+              <a href="./portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="./careers.html">Careers</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        <ul>
+          <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./about.html">About Us</a>
+            </li>
+            <li>
+              <a href="./services.html">Services</a>
+            </li>
+            <li>
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li>
+                <a href="./portfolio.html">Portfolio</a>
+              </li>
+              <li>
+                <a href="./careers.html">Careers</a>
+              </li>
+        </ul>
+      </div>
+  
+  
+      <script >
+  
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          const mobileNav = document.querySelector(".hamburger");
+          const navbar = document.querySelector(".menubar");
+      
+          const toggleNav = () => {
+              navbar.classList.toggle("active");
+              mobileNav.classList.toggle("hamburger-active");
+          };
+      
+          mobileNav.addEventListener("click", toggleNav);
+      });
+      
+      </script>
+
+
+
+
+      <section class="about-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>About Us</h1>
+                <p>We are driven by innovation and excellence, shaping the future with creativity.</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+    <section class="company-vision">
+        <div class="vision-container">
+            <div class="vision-text">
+                <h2>Our Vision</h2>
+                <p>We strive to lead innovation by blending creativity, collaboration, and advanced technology to shape a better future.</p>
+                <div class="vision-points">
+                    <div class="vision-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Innovation</h3>
+                        <p>Embracing cutting-edge ideas to stay ahead.</p>
+                    </div>
+                    <div class="vision-box">
+                        <i class="fas fa-users"></i>
+                        <h3>Collaboration</h3>
+                        <p>Teamwork and strategic partnerships for growth.</p>
+                    </div>
+                    <div class="vision-box">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Growth</h3>
+                        <p>Building long-term impact through sustainable solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vision-image">
+                <img src="images/vision.png" alt="Company Vision">
+            </div>
+        </div>
+    </section>
+    
+
+ 
+    
+   
+    
+    <section class="new-about-achievements">
+        <div class="new-achievements-container">
+            <div class="new-achievements-header">
+                <h2>Our Milestones</h2>
+                <p>We take pride in our achievements, constantly pushing the boundaries of excellence.</p>
+            </div>
+            <div class="new-achievements-content">
+                <div class="new-achievements-left">
+                    <h3>What We Have Accomplished</h3>
+                    <p>From groundbreaking innovations to global recognition, our journey has been remarkable.</p>
+                </div>
+                <div class="new-achievements-right">
+                    <div class="new-achievement-item">
+                        <span class="new-counter" data-target="150">0</span>
+                        <p>Successful Projects</p>
+                    </div>
+                    <div class="new-achievement-item">
+                        <span class="new-counter" data-target="200">0</span>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="new-achievement-item">
+                        <span class="new-counter" data-target="50">0</span>
+                        <p>Awards Won</p>
+                    </div>
+                    <div class="new-achievement-item">
+                        <span class="new-counter" data-target="10">0</span>
+                        <p>Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- <section class="about-team">
+        <div class="about-wrapper">
+            <h2>Meet Our Experts</h2>
+            <div class="team-cards">
+                <div class="team-card">
+                    <div class="profile">
+                        <img src="images/team1.jpg" alt="John Doe">
+                    </div>
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                    <div class="skills">
+                        <span>Leadership</span>
+                        <span>Strategy</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="profile">
+                        <img src="images/team2.jpg" alt="Sarah Smith">
+                    </div>
+                    <h3>Sarah Smith</h3>
+                    <p>Creative Director</p>
+                    <div class="skills">
+                        <span>Branding</span>
+                        <span>UI/UX</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="profile">
+                        <img src="images/team3.jpg" alt="David Wilson">
+                    </div>
+                    <h3>David Wilson</h3>
+                    <p>Lead Developer</p>
+                    <div class="skills">
+                        <span>Full-Stack</span>
+                        <span>AI & ML</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(".new-counter");
+            let hasRun = false;
+        
+            const startCounting = (counter) => {
+                const target = +counter.getAttribute("data-target");
+                let count = 0;
+                const speed = Math.ceil(target / 100);
+        
+                const updateCounter = () => {
+                    count += speed;
+                    counter.innerText = count;
+                    if (count < target) {
+                        setTimeout(updateCounter, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+        
+                updateCounter();
+            };
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasRun) {
+                        hasRun = true;
+                        counters.forEach((counter) => startCounting(counter));
+                    }
+                });
+            }, { threshold: 0.5 });
+        
+            counters.forEach((counter) => observer.observe(counter));
+        });
+        
+        
+        
+    </script>
+
+
+
+    <section class="unique-team">
+        <div class="team-container">
+            <h2>Meet Our Experts</h2>
+            <p>Our passionate team of professionals drives innovation and success.</p>
+    
+            <div class="team-wrapper">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="images/one.jpeg" alt="John Doe">
+                    </div>
+                    <div class="team-info">
+                        <h3>John Doe</h3>
+                        <p>CEO & Founder</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="images/two.jpeg" alt="Sarah Smith">
+                    </div>
+                    <div class="team-info">
+                        <h3>Sarah Smith</h3>
+                        <p>Creative Director</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="images/three.jpeg" alt="David Wilson">
+                    </div>
+                    <div class="team-info">
+                        <h3>David Wilson</h3>
+                        <p>Lead Developer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="history-section">
+        <div class="history-container">
+            <h2>Our Journey Through Time</h2>
+            <p>From humble beginnings to industry leaders, here’s how we evolved.</p>
+    
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="year">2015</span>
+                        <h3>Company Founded</h3>
+                        <p>We started as a small team with a vision to innovate and transform industries.</p>
+                    </div>
+                </div>
+    
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="year">2018</span>
+                        <h3>Major Breakthrough</h3>
+                        <p>Our innovative solutions gained recognition, expanding our reach globally.</p>
+                    </div>
+                </div>
+    
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="year">2021</span>
+                        <h3>Global Expansion</h3>
+                        <p>We entered new markets, building a network of industry leaders.</p>
+                    </div>
+                </div>
+    
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="year">2023</span>
+                        <h3>Industry Leader</h3>
+                        <p>Today, we stand as a trusted name in innovation and excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const timelineItems = document.querySelectorAll(".timeline-item");
+        
+            const revealOnScroll = () => {
+                timelineItems.forEach((item) => {
+                    const itemTop = item.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    if (itemTop < windowHeight - 100) {
+                        item.classList.add("visible");
+                    }
+                });
+            };
+        
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // Run once on load in case elements are already in view
+        });
+        
+    </script>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-box">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to providing the best solutions for your business, focusing on innovation and excellence.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+      
+                <!-- Quick Links -->
+                <div class="footer-box">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Services -->
+                <div class="footer-box">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Contact -->
+                <div class="footer-box">
+                    <h3>Contact Us</h3>
+                    <p>📍 123 Street, City, Country</p>
+                    <p>📞 +123 456 7890</p>
+                    <p>📧 info@example.com</p>
+                </div>
+            </div>
+      
+            <!-- Copyright & Scroll to Top -->
+            <div class="footer-bottom">
+                <p>© 2025 Your Company. All rights reserved.</p>
+                <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const scrollTopBtn = document.querySelector(".scroll-top");
+      
+          scrollTopBtn.addEventListener("click", function () {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+      });
+      
+      </script>
+
+</body>
+</html>

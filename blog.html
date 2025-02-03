@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    
+
+
+    <nav>
+        <div class="logo">
+          <img src="assets/Logo64x64.png" alt="logo" />
+          <h1>LOGO</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About Us</a>
+          </li>
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+          <li>
+            <a href="./blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact Us</a>
+          </li>
+          <li>
+              <a href="./portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="./careers.html">Careers</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        <ul>
+          <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./about.html">About Us</a>
+            </li>
+            <li>
+              <a href="./services.html">Services</a>
+            </li>
+            <li>
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li>
+                <a href="./portfolio.html">Portfolio</a>
+              </li>
+              <li>
+                <a href="./careers.html">Careers</a>
+              </li>
+        </ul>
+      </div>
+  
+  
+      <script >
+  
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          const mobileNav = document.querySelector(".hamburger");
+          const navbar = document.querySelector(".menubar");
+      
+          const toggleNav = () => {
+              navbar.classList.toggle("active");
+              mobileNav.classList.toggle("hamburger-active");
+          };
+      
+          mobileNav.addEventListener("click", toggleNav);
+      });
+      
+      </script>
+
+
+
+      
+
+
+      <section class="blog-hero">
+        <h1>Latest Blogs & Insights</h1>
+        <p>Stay updated with the latest trends, news, and insights from the industry.</p>
+        <input type="text" id="searchBar" placeholder="Search blogs..." onkeyup="searchBlogs()">
+    </section>
+    
+
+
+    <!-- Scrolling Marquee News -->
+<div class="news-marquee">
+    <marquee behavior="scroll" direction="left">
+        🚀 AI Takes Over Coding | 🚀 SpaceX Launches New Rocket | 🚀 New iPhone Released | 🚀 Global Tech Summit 2024 Announced
+    </marquee>
+</div>
+
+<!-- Breaking News Carousel -->
+<section class="news-carousel">
+    <h2>Breaking News</h2>
+    <div class="news-slider">
+        <div class="news-slide active">
+            <img src="./images/ai.jpg" alt="News 1">
+            <div class="news-content">
+                <h3>AI Takes Over Coding</h3>
+                <p>AI tools are now generating full applications with minimal input.</p>
+            </div>
+        </div>
+
+        <div class="news-slide">
+            <img src="./images/spacex.jpeg" alt="News 2">
+            <div class="news-content">
+                <h3>SpaceX Launches New Rocket</h3>
+                <p>Elon Musk's SpaceX successfully launched a new reusable rocket.</p>
+            </div>
+        </div>
+
+        <div class="news-slide">
+            <img src="./images/iphone.jpeg" alt="News 3">
+            <div class="news-content">
+                <h3>New iPhone Released</h3>
+                <p>Apple unveils the latest iPhone with game-changing features.</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="news-prev" onclick="prevNews()">&#10094;</button>
+    <button class="news-next" onclick="nextNews()">&#10095;</button>
+</section>
+
+
+
+
+
+
+    <div class="blog-container">
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+            <h2>Categories</h2>
+            <ul id="categoryList">
+                <li onclick="filterBlogs('all')">All</li>
+                <li onclick="filterBlogs('tech')">Tech</li>
+                <li onclick="filterBlogs('business')">Business</li>
+                <li onclick="filterBlogs('design')">Design</li>
+            </ul>
+    
+            <h2>Trending Posts</h2>
+            <div id="trendingPosts">
+                <p><a href="#">The Future of AI</a></p>
+                <p><a href="#">UI/UX Design Trends</a></p>
+                <p><a href="#">Business Strategies for 2024</a></p>
+            </div>
+        </aside>
+    
+        <!-- Blog Grid -->
+        <main class="blog-grid">
+            <div class="blog-card tech">
+                <img src="./images/ai.jpg" alt="AI Trends">
+                <h3>The Future of AI</h3>
+                <p>AI is transforming industries...</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+    
+            <div class="blog-card business">
+                <img src="./images/business.jpg" alt="Business Strategies">
+                <h3>Business Strategies 2024</h3>
+                <p>Learn the best strategies...</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+    
+            <div class="blog-card design">
+                <img src="./images/ui_ux.jpg" alt="Design Trends">
+                <h3>UI/UX Design Trends</h3>
+                <p>Latest UI/UX trends to follow...</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+    
+            <div class="blog-card tech">
+                <img src="./images/tech_innovatives.jpg" alt="Tech Innovations">
+                <h3>Tech Innovations</h3>
+                <p>Upcoming tech innovations...</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+    
+            <div class="blog-card tech">
+                <img src="./images/block_chain.jpg" alt="Blockchain">
+                <h3>Blockchain Explained</h3>
+                <p>Understanding blockchain in 2024...</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+    
+            <div class="blog-card business">
+                <img src="./images/marketing.jpg" alt="Digital Marketing">
+                <h3>Marketing in the Digital Age</h3>
+                <p>How marketing is evolving...</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+        </main>
+    </div>
+    
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-box">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to providing the best solutions for your business, focusing on innovation and excellence.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+      
+                <!-- Quick Links -->
+                <div class="footer-box">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Services -->
+                <div class="footer-box">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Contact -->
+                <div class="footer-box">
+                    <h3>Contact Us</h3>
+                    <p>📍 123 Street, City, Country</p>
+                    <p>📞 +123 456 7890</p>
+                    <p>📧 info@example.com</p>
+                </div>
+            </div>
+      
+            <!-- Copyright & Scroll to Top -->
+            <div class="footer-bottom">
+                <p>© 2025 Your Company. All rights reserved.</p>
+                <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const scrollTopBtn = document.querySelector(".scroll-top");
+      
+          scrollTopBtn.addEventListener("click", function () {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+      });
+      
+      </script>
+
+      <script src="./script.js"></script>
+</body>
+</html>

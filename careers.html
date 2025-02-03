@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    
+
+
+    <nav>
+        <div class="logo">
+          <img src="assets/Logo64x64.png" alt="logo" />
+          <h1>LOGO</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About Us</a>
+          </li>
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+          <li>
+            <a href="./blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact Us</a>
+          </li>
+          <li>
+              <a href="./portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="./careers.html">Careers</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        <ul>
+          <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./about.html">About Us</a>
+            </li>
+            <li>
+              <a href="./services.html">Services</a>
+            </li>
+            <li>
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li>
+                <a href="./portfolio.html">Portfolio</a>
+              </li>
+              <li>
+                <a href="./careers.html">Careers</a>
+              </li>
+        </ul>
+      </div>
+  
+  
+      <script >
+  
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          const mobileNav = document.querySelector(".hamburger");
+          const navbar = document.querySelector(".menubar");
+      
+          const toggleNav = () => {
+              navbar.classList.toggle("active");
+              mobileNav.classList.toggle("hamburger-active");
+          };
+      
+          mobileNav.addEventListener("click", toggleNav);
+      });
+      
+      </script>
+
+
+      <section class="split-hero-section">
+        <div class="split-left">
+            <h1>Join Our Team</h1>
+            <p>Be part of a team that thrives on creativity, innovation, and success.</p>
+        </div>
+        <div class="split-right">
+            <h2>Ready to Make an Impact?</h2>
+            <a href="#job-openings" class="split-cta-button">View Open Positions</a>
+        </div>
+    </section>
+    
+    
+    
+
+
+
+
+    <section class="job-openings">
+        <h2>Current Job Openings</h2>
+        <div class="job-listings">
+            <section class="reveal-left">
+            <div class="job-card">
+                <div class="job-card-header">
+                    <img src="frontend-icon.png" alt="Frontend" />
+                </div>
+                <div class="job-card-body">
+                    <h3>Frontend Developer</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Remote</p>
+                    <p class="department"><i class="fas fa-building"></i> Engineering</p>
+                    <p class="job-summary">Build user-facing features using modern technologies and innovative UI/UX designs.</p>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#apply" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+            </section>
+            
+            <section class="reveal-left">
+            <div class="job-card">
+                <div class="job-card-header">
+                    <img src="./images/app.png" alt="UX/UI Design" />
+                </div>
+                <div class="job-card-body">
+                    <h3>UX/UI Designer</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> New York</p>
+                    <p class="department"><i class="fas fa-building"></i> Design</p>
+                    <p class="job-summary">Design intuitive interfaces and create engaging user experiences for web and mobile apps.</p>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#apply" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+            </section>
+
+            <section class="reveal-left">
+            <div class="job-card">
+                <div class="job-card-header">
+                    <img src="ux-ui-icon.png" alt="UX/UI Design" />
+                </div>
+                <div class="job-card-body">
+                    <h3>UX/UI Designer</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> New York</p>
+                    <p class="department"><i class="fas fa-building"></i> Design</p>
+                    <p class="job-summary">Design intuitive interfaces and create engaging user experiences for web and mobile apps.</p>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#apply" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+            </section>
+
+            <section class="reveal-right">
+            <div class="job-card">
+                <div class="job-card-header">
+                    <img src="ux-ui-icon.png" alt="UX/UI Design" />
+                </div>
+                <div class="job-card-body">
+                    <h3>UX/UI Designer</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> New York</p>
+                    <p class="department"><i class="fas fa-building"></i> Design</p>
+                    <p class="job-summary">Design intuitive interfaces and create engaging user experiences for web and mobile apps.</p>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#apply" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+            </section>
+
+            <section class="reveal-right">
+            <div class="job-card">
+                <div class="job-card-header">
+                    <img src="ux-ui-icon.png" alt="UX/UI Design" />
+                </div>
+                <div class="job-card-body">
+                    <h3>UX/UI Designer</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> New York</p>
+                    <p class="department"><i class="fas fa-building"></i> Design</p>
+                    <p class="job-summary">Design intuitive interfaces and create engaging user experiences for web and mobile apps.</p>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#apply" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+            </section>
+
+           
+            <section class="reveal-right">
+            <div class="job-card">
+                <div class="job-card-header">
+                    <img src="product-manager-icon.png" alt="Product Manager" />
+                </div>
+                <div class="job-card-body">
+                    <h3>Product Manager</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> San Francisco</p>
+                    <p class="department"><i class="fas fa-building"></i> Product</p>
+                    <p class="job-summary">Lead product teams, define features, and collaborate to create exceptional products.</p>
+                </div>
+                <div class="job-card-footer">
+                    <a href="#apply" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+            </section>
+        </div>
+    </section>
+    
+
+
+
+
+
+    <section class="careers-application-form">
+        <h2>Apply for a Job</h2>
+        <p class="form-description">Please fill in the form below to apply for your desired position. We look forward to reviewing your application!</p>
+    
+        <div class="form-container">
+            <!-- Left Form Content -->
+            <form id="multiStepForm" action="#" method="POST" enctype="multipart/form-data" class="form-content">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step" id="step1">
+                    <h3>Step 1: Personal Information</h3>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Your phone number">
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="next-btn" onclick="nextStep(1)">Next</button>
+                    </div>
+                </div>
+    
+                <!-- Step 2: Job Information -->
+                <div class="form-step" id="step2" style="display: none;">
+                    <h3>Step 2: Job Information</h3>
+                    <div class="form-group">
+                        <label for="jobPosition">Job Position</label>
+                        <select id="jobPosition" name="jobPosition" required>
+                            <option value="frontend">Frontend Developer</option>
+                            <option value="uxui">UX/UI Designer</option>
+                            <option value="pm">Product Manager</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="coverLetter">Cover Letter</label>
+                        <textarea id="coverLetter" name="coverLetter" required placeholder="Tell us why you're a great fit for this position"></textarea>
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="prev-btn" onclick="prevStep(2)">Back</button>
+                        <button type="button" class="next-btn" onclick="nextStep(2)">Next</button>
+                    </div>
+                </div>
+    
+                <!-- Step 3: Resume Upload -->
+                <div class="form-step" id="step3" style="display: none;">
+                    <h3>Step 3: Resume Upload</h3>
+                    <div class="form-group">
+                        <label for="resume">Upload Resume</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="prev-btn" onclick="prevStep(3)">Back</button>
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </div>
+                </div>
+            </form>
+    
+            <!-- Right Side Content (Image or Auto-Typing Text) -->
+            <div class="form-illustration">
+                <img src="./images/job-form.jpg" alt="Application Illustration">
+                <!-- Or use auto-typing text -->
+                <!-- <p id="autoTypingText"></p> -->
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-box">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to providing the best solutions for your business, focusing on innovation and excellence.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+      
+                <!-- Quick Links -->
+                <div class="footer-box">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Services -->
+                <div class="footer-box">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Contact -->
+                <div class="footer-box">
+                    <h3>Contact Us</h3>
+                    <p>📍 123 Street, City, Country</p>
+                    <p>📞 +123 456 7890</p>
+                    <p>📧 info@example.com</p>
+                </div>
+            </div>
+      
+            <!-- Copyright & Scroll to Top -->
+            <div class="footer-bottom">
+                <p>© 2025 Your Company. All rights reserved.</p>
+                <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const scrollTopBtn = document.querySelector(".scroll-top");
+      
+          scrollTopBtn.addEventListener("click", function () {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+      });
+      
+      </script>
+
+      <script src="./script.js"></script>
+</body>
+</html>

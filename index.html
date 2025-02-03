@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" type="text/css" target="_blank" href="styles.css" />
+   
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="assets/Logo64x64.png" alt="logo" />
+        <h1>LOGO</h1>
+      </div>
+      <ul>
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <a href="./about.html">About Us</a>
+        </li>
+        <li>
+          <a href="./services.html">Services</a>
+        </li>
+        <li>
+          <a href="./blog.html">Blog</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact Us</a>
+        </li>
+        <li>
+            <a href="./portfolio.html">Portfolio</a>
+          </li>
+          <li>
+            <a href="./careers.html">Careers</a>
+          </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <div class="menubar">
+      <ul>
+        <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About Us</a>
+          </li>
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+          <li>
+            <a href="./blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact Us</a>
+          </li>
+          <li>
+              <a href="./portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="./careers.html">Careers</a>
+            </li>
+      </ul>
+    </div>
+
+    <script >
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileNav = document.querySelector(".hamburger");
+        const navbar = document.querySelector(".menubar");
+    
+        const toggleNav = () => {
+            navbar.classList.toggle("active");
+            mobileNav.classList.toggle("hamburger-active");
+        };
+    
+        mobileNav.addEventListener("click", toggleNav);
+    });
+    
+    </script>
+
+
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <!-- Banner Section -->
+    <section class="banner" id="banner">
+        <div class="content">
+            <h1>Welcome to Our <span class="dynamic-word">World</span></h1>
+            <p>Your one-stop solution for <span class="highlight">innovation</span> and <span class="highlight">creativity</span>.</p>
+            <button class="cta-btn">Get Started</button>
+        </div>
+    </section>
+
+    <script>
+      const words = ["World", "Future", "Vision", "Journey"];
+      const images = [
+          "images/im1.jpg", 
+          "images/img2.jpg", 
+          "images/img3.jpg", 
+          "images/img4.jpg"
+      ];
+      
+      let index = 0;
+      const dynamicWordElement = document.querySelector('.dynamic-word');
+      const banner = document.getElementById('banner');
+      const cursorDot = document.querySelector(".cursor-dot");
+      const cursorCircle = document.querySelector(".cursor-circle");
+  
+      function changeContent() {
+          if (!dynamicWordElement || !banner) return;
+  
+          banner.classList.add("fade");
+          dynamicWordElement.style.opacity = 0;
+  
+          setTimeout(() => {
+              index = (index + 1) % words.length;
+              dynamicWordElement.textContent = words[index];
+              banner.style.backgroundImage = `url('${images[index]}')`;
+              dynamicWordElement.style.opacity = 1;
+          }, 1000);
+  
+          setTimeout(() => {
+              banner.classList.remove("fade");
+          }, 2000);
+      }
+  
+      setInterval(changeContent, 5000);
+  
+  </script>
+  
+      
+
+
+  <section class="services">
+    <div class="container">
+        <div class="services-layout">
+            <!-- Left Side: Text Content -->
+            <div class="services-text">
+                <span class="sub-heading">WHAT WE DO</span>
+                <h2 >We Work Performed For <br> Client Happy.</h2>
+                <p>We provide innovative solutions with a blend of creativity and technology to elevate your business.</p>
+                <button class="cta-btn">View All Services</button>
+            </div>
+
+            <!-- Right Side: Service Boxes -->
+            <div class="services-grid">
+                <section class="reveal-top">
+                <div class="service-box" data-number="01">
+                    <div class="icon"><img src="./images/app.png" alt="Web Design"></div>
+                    <h3>Web Design</h3>
+                    <p>Creating visually stunning and user-friendly website designs.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                </section>
+                <section class="reveal-bottom">
+                <div class="service-box" data-number="02">
+                    <div class="icon"><img src="./images/do1.png" alt="App Design"></div>
+                    <h3>App Design</h3>
+                    <p>Designing smooth, intuitive, and modern app interfaces.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                </section>
+                <section class="reveal-top">
+                <div class="service-box" data-number="03">
+                    <div class="icon"><img src="./images/web.png" alt="Developing"></div>
+                    <h3>Developing</h3>
+                    <p>Building scalable, fast, and innovative digital solutions.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </section>
+            <section class="reveal-bottom">
+                <div class="service-box" data-number="04">
+                    <div class="icon"><img src="./images/app.png" alt="Graphic Design"></div>
+                    <h3>Graphic Design</h3>
+                    <p>Bringing your brand to life with creative visuals.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="why-choose">
+  <div class="container">
+      <div class="why-text">
+          <span class="sub-heading">WHY CHOOSE US</span>
+          <h2>We Deliver Excellence with <br> Innovation & Quality</h2>
+          <p>Our team blends creativity, technology, and strategy to provide cutting-edge solutions tailored to your needs.</p>
+      </div>
+      <div class="why-grid">
+        <section class="reveal-left">
+          <div class="why-box">
+              <h3>🚀 High Performance</h3>
+              <p>Optimized solutions ensuring high speed & efficiency.</p>
+          </div>
+        </section>
+        <section class="reveal-right">
+          <div class="why-box">
+              <h3>🎨 Stunning Designs</h3>
+              <p>Visually appealing and user-friendly UI/UX experiences.</p>
+          </div>
+        </section>
+        <section class="reveal-left">
+          <div class="why-box">
+              <h3>🔒 Secure & Reliable</h3>
+              <p>Top-notch security measures to protect your data.</p>
+          </div>
+        </section>
+        <section class="reveal-right">
+          <div class="why-box">
+              <h3>🤝 Dedicated Support</h3>
+              <p>24/7 expert assistance to help you succeed.</p>
+          </div>
+        </section>
+      </div>
+  </div>
+</section>
+
+  
+
+<section class="achievements">
+  <div class="container">
+      <div class="achievements-text">
+          <span class="sub-heading">OUR ACHIEVEMENTS</span>
+          <h2>We Have Delivered Excellence <br> in Every Project</h2>
+          <p>Our work speaks for itself. With innovation and commitment, we have achieved remarkable milestones.</p>
+      </div>
+      <div class="achievements-grid">
+          <div class="achievement-box">
+              <h3 class="counter" data-target="150">0</h3>
+              <p>Projects Completed</p>
+          </div>
+          <div class="achievement-box">
+              <h3 class="counter" data-target="200">0</h3>
+              <p>Happy Clients</p>
+          </div>
+          <div class="achievement-box">
+              <h3 class="counter" data-target="50">0</h3>
+              <p>Awards Won</p>
+          </div>
+          <div class="achievement-box">
+              <h3 class="counter" data-target="10">0</h3>
+              <p>Years of Experience</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".counter");
+    let hasRun = false; // Ensures animation runs only once
+
+    const startCounting = (counter) => {
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+        const speed = Math.ceil(target / 100); // Adjust speed
+
+        const updateCounter = () => {
+            count += speed;
+            counter.innerText = count;
+            if (count < target) {
+                setTimeout(updateCounter, 30); // Speed control
+            } else {
+                counter.innerText = target; // Ensure it reaches exact target
+            }
+        };
+
+        updateCounter();
+    };
+
+    // Observer to trigger counting when section is visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting && !hasRun) {
+                hasRun = true;
+                counters.forEach((counter) => startCounting(counter));
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach((counter) => observer.observe(counter));
+});
+
+</script>
+
+<section class="testimonials">
+  <div class="container">
+      <div class="testimonial-slider">
+          <div class="testimonial active">
+              <div class="quote-icon">❝</div>
+              <p>"Curabitur magna nisi, egestas quis est in, finibus pulvinar ipsum. 
+                 Nunc sit amet odio interdum, maximus dolor quis, ullamcorper lectus. 
+                 Mauris vitae faucibus libero. Curabitur eu convallis purus."</p>
+              <div class="quote-icon bottom">❞</div>
+              <div class="client-info">
+                  <img src="images/client1.jpg" alt="Client">
+                  <div class="details">
+                      <h4>Savannah Nguyen</h4>
+                      <span>Executive CEO</span>
+                  </div>
+              </div>
+              <div class="rating">
+                  ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+          </div>
+
+          <div class="testimonial">
+              <div class="quote-icon">❝</div>
+              <p>"An exceptional experience! Their work truly exceeded my expectations 
+                 in every way. Highly recommend!"</p>
+              <div class="quote-icon bottom">❞</div>
+              <div class="client-info">
+                  <img src="images/client2.jpg" alt="Client">
+                  <div class="details">
+                      <h4>David Wilson</h4>
+                      <span>Founder, DigitalBoost</span>
+                  </div>
+              </div>
+              <div class="rating">
+                  ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+          </div>
+
+          <div class="testimonial">
+              <div class="quote-icon">❝</div>
+              <p>"Professional and innovative! They transformed our ideas into 
+                 something truly remarkable."</p>
+              <div class="quote-icon bottom">❞</div>
+              <div class="client-info">
+                  <img src="images/client3.jpg" alt="Client">
+                  <div class="details">
+                      <h4>Emma Brown</h4>
+                      <span>CTO, InnovateX</span>
+                  </div>
+              </div>
+              <div class="rating">
+                  ⭐ ⭐ ⭐ ⭐ ⭐
+              </div>
+          </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+          <span class="current-slide">1</span> / <span class="total-slides">3</span>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="slider-controls">
+          <button class="prev">&lt;</button>
+          <button class="next">&gt;</button>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const testimonials = document.querySelectorAll(".testimonial");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    const currentSlideElement = document.querySelector(".current-slide");
+    const totalSlidesElement = document.querySelector(".total-slides");
+
+    let index = 0;
+    const totalSlides = testimonials.length;
+    totalSlidesElement.innerText = totalSlides;
+
+    function showTestimonial() {
+        testimonials.forEach((t, i) => {
+            t.classList.remove("active");
+        });
+        testimonials[index].classList.add("active");
+        currentSlideElement.innerText = index + 1;
+    }
+
+    function nextTestimonial() {
+        index = (index + 1) % totalSlides;
+        showTestimonial();
+    }
+
+    function prevTestimonial() {
+        index = (index - 1 + totalSlides) % totalSlides;
+        showTestimonial();
+    }
+
+    nextBtn.addEventListener("click", nextTestimonial);
+    prevBtn.addEventListener("click", prevTestimonial);
+
+    showTestimonial();
+    setInterval(nextTestimonial, 5000);
+});
+
+
+</script>
+
+
+
+
+
+
+<section class="our-partners">
+  <div class="container">
+      <div class="partners-content">
+          <!-- Left: Text & Newsletter Form -->
+          <div class="partners-text">
+              <span class="sub-heading">OUR PARTNERS</span>
+              <h2>Subscribe & Stay Updated</h2>
+              <p>Join our newsletter and be the first to receive the latest updates from our trusted industry partners.</p>
+              
+              <form class="newsletter-form">
+                  <input type="email" placeholder="Enter your email" required>
+                  <button type="submit">Subscribe</button>
+              </form>
+          </div>
+
+          <!-- Right: Partner Logos -->
+          <div class="partner-logos">
+            <div class="partner-logo"><img src="./images/logo.png" alt="Partner"></div>
+            <div class="partner-logo"><img src="./images/nfen_info-removebg-preview.png" alt="Partner"></div>
+            <div class="partner-logo"><img src="./images/sky_web-removebg-preview.png" alt="Partner"></div>
+            <div class="partner-logo"><img src="./images/r_scope.png" alt="Partner"></div>
+            <div class="partner-logo"><img src="./images/octad.png" alt="Partner"></div>
+              <div class="partner-logo"><img src="images/partner5.png" alt="Partner"></div>
+              <div class="partner-logo"><img src="images/partner6.png" alt="Partner"></div>
+              <div class="partner-logo"><img src="./images/logo.png" alt="Partner"></div>
+              <div class="partner-logo"><img src="./images/nfen_info-removebg-preview.png" alt="Partner"></div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- <section class="our-partners">
+  <div class="container">
+      <div class="partners-text">
+          <span class="sub-heading">OUR PARTNERS</span>
+          <h2>Trusted by Industry Leaders</h2>
+      </div>
+
+      <div class="partner-slider">
+          <div class="partner-logo"><img src="./images/logo.png" alt="Partner"></div>
+          <div class="partner-logo"><img src="./images/nfen_info-removebg-preview.png" alt="Partner"></div>
+          <div class="partner-logo"><img src="./images/sky_web-removebg-preview.png" alt="Partner"></div>
+          <div class="partner-logo"><img src="./images/r_scope.png" alt="Partner"></div>
+          <div class="partner-logo"><img src="./images/octad.png" alt="Partner"></div>
+          <div class="partner-logo"><img src="images/partner6.png" alt="Partner"></div>
+          <div class="partner-logo"><img src="images/partner7.png" alt="Partner"></div>
+      </div>
+  </div>
+</section> -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".partner-slider");
+    let scrollAmount = 0;
+    let speed = 2; // Adjust speed
+
+    function autoScroll() {
+        scrollAmount += speed;
+        if (scrollAmount >= slider.scrollWidth / 2) {
+            scrollAmount = 0;
+        }
+        slider.scrollLeft = scrollAmount;
+        requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll();
+});
+
+</script>
+
+<section class="portfolio">
+  <div class="container">
+      <div class="portfolio-header">
+          <span class="sub-heading">OUR WORK</span>
+          <h2>Creative Portfolio</h2>
+          <div class="portfolio-filters">
+              <button data-filter="all" class="active">All</button>
+              <button data-filter="web">Web Design</button>
+              <button data-filter="branding">Branding</button>
+              <button data-filter="uiux">UI/UX</button>
+          </div>
+      </div>
+
+      <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="web">
+              <img src="images/uit.png" alt="Project 1">
+              <div class="overlay">
+                  <h3>Modern Website</h3>
+                  <p>Web Design</p>
+              </div>
+          </div>
+          <div class="portfolio-item" data-category="branding">
+              <img src="images/ems.png" alt="Project 2">
+              <div class="overlay">
+                  <h3>Brand Identity</h3>
+                  <p>Branding</p>
+              </div>
+          </div>
+          <div class="portfolio-item" data-category="uiux">
+              <img src="images/face.png" alt="Project 3">
+              <div class="overlay">
+                  <h3>UI/UX Redesign</h3>
+                  <p>UI/UX</p>
+              </div>
+          </div>
+          <div class="portfolio-item" data-category="web">
+              <img src="images/trendy.png" alt="Project 4">
+              <div class="overlay">
+                  <h3>Creative Web App</h3>
+                  <p>Web Development</p>
+              </div>
+          </div>
+          <div class="portfolio-item" data-category="branding">
+              <img src="images/uit.png" alt="Project 5">
+              <div class="overlay">
+                  <h3>Luxury Branding</h3>
+                  <p>Branding</p>
+              </div>
+          </div>
+          <div class="portfolio-item" data-category="web">
+            <img src="images/trendy.png" alt="Project 4">
+            <div class="overlay">
+                <h3>Creative Web App</h3>
+                <p>Web Development</p>
+            </div>
+        </div>
+      </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".portfolio-filters button");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            const category = button.getAttribute("data-filter");
+            portfolioItems.forEach((item) => {
+                if (category === "all" || item.getAttribute("data-category") === category) {
+                    item.style.display = "block";
+                    setTimeout(() => item.classList.add("fade-in"), 100);
+                } else {
+                    item.classList.remove("fade-in");
+                    setTimeout(() => (item.style.display = "none"), 200);
+                }
+            });
+        });
+    });
+});
+
+</script>
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+      <div class="footer-content">
+          <!-- About Section -->
+          <div class="footer-box">
+              <h3>About Us</h3>
+              <p>We are dedicated to providing the best solutions for your business, focusing on innovation and excellence.</p>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-box">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-box">
+              <h3>Our Services</h3>
+              <ul>
+                  <li><a href="#">Web Development</a></li>
+                  <li><a href="#">UI/UX Design</a></li>
+                  <li><a href="#">Digital Marketing</a></li>
+                  <li><a href="#">SEO Optimization</a></li>
+              </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-box">
+              <h3>Contact Us</h3>
+              <p>📍 123 Street, City, Country</p>
+              <p>📞 +123 456 7890</p>
+              <p>📧 info@example.com</p>
+          </div>
+      </div>
+
+      <!-- Copyright & Scroll to Top -->
+      <div class="footer-bottom">
+          <p>© 2025 Your Company. All rights reserved.</p>
+          <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+      </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollTopBtn = document.querySelector(".scroll-top");
+
+    scrollTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+</script>
+
+<script src="./script.js"></script>
+
+  </body>
+</html>

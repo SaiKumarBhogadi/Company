@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    
+
+
+    <nav>
+        <div class="logo">
+          <img src="assets/Logo64x64.png" alt="logo" />
+          <h1>LOGO</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About Us</a>
+          </li>
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+          <li>
+            <a href="./blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact Us</a>
+          </li>
+          <li>
+              <a href="./portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="./careers.html">Careers</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        <ul>
+          <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./about.html">About Us</a>
+            </li>
+            <li>
+              <a href="./services.html">Services</a>
+            </li>
+            <li>
+              <a href="./blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li>
+                <a href="./portfolio.html">Portfolio</a>
+              </li>
+              <li>
+                <a href="./careers.html">Careers</a>
+              </li>
+        </ul>
+      </div>
+  
+  
+      <script >
+  
+  
+        document.addEventListener("DOMContentLoaded", function () {
+          const mobileNav = document.querySelector(".hamburger");
+          const navbar = document.querySelector(".menubar");
+      
+          const toggleNav = () => {
+              navbar.classList.toggle("active");
+              mobileNav.classList.toggle("hamburger-active");
+          };
+      
+          mobileNav.addEventListener("click", toggleNav);
+      });
+      
+      </script>
+
+
+
+      <section class="portfolio-banner">
+        <div class="portfolio-overlay"></div>
+        <div class="portfolio-content">
+            <h1 class="portfolio-title">Elevate Your <span class="portfolio-highlight">Creative Portfolio</span></h1>
+            <p class="portfolio-text">Showcase your projects with style. Let your work shine with a stunning portfolio that highlights your expertise.</p>
+            <div class="portfolio-buttons">
+                <button class="portfolio-btn">Get Started</button>
+                <div class="portfolio-video" id="play-video">
+                    <span class="portfolio-play">▶</span>
+                    <span class="portfolio-video-text">Watch Demo Video</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="video-modal" id="video-modal">
+        <div class="video-container">
+            <button class="close-video" id="close-video">×</button>
+            <iframe id="video-frame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script>
+        document.getElementById("play-video").addEventListener("click", function() {
+            document.getElementById("video-modal").style.display = "flex";
+        });
+        document.getElementById("close-video").addEventListener("click", function() {
+            document.getElementById("video-modal").style.display = "none";
+        });
+    </script>
+    
+    
+
+
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <span class="sub-heading">OUR WORK</span>
+                <h2>Creative Portfolio</h2>
+                <div class="portfolio-filters">
+                    <button data-filter="all" class="active">All</button>
+                    <button data-filter="web">Web Design</button>
+                    <button data-filter="branding">Branding</button>
+                    <button data-filter="uiux">UI/UX</button>
+                </div>
+            </div>
+      
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <img src="images/uit.png" alt="Project 1">
+                    <div class="overlay">
+                        <h3>Modern Website</h3>
+                        <p>Web Design</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <img src="images/ems.png" alt="Project 2">
+                    <div class="overlay">
+                        <h3>Brand Identity</h3>
+                        <p>Branding</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="uiux">
+                    <img src="images/face.png" alt="Project 3">
+                    <div class="overlay">
+                        <h3>UI/UX Redesign</h3>
+                        <p>UI/UX</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="images/trendy.png" alt="Project 4">
+                    <div class="overlay">
+                        <h3>Creative Web App</h3>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <img src="images/uit.png" alt="Project 5">
+                    <div class="overlay">
+                        <h3>Luxury Branding</h3>
+                        <p>Branding</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                  <img src="images/trendy.png" alt="Project 4">
+                  <div class="overlay">
+                      <h3>Creative Web App</h3>
+                      <p>Web Development</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const filterButtons = document.querySelectorAll(".portfolio-filters button");
+          const portfolioItems = document.querySelectorAll(".portfolio-item");
+      
+          filterButtons.forEach((button) => {
+              button.addEventListener("click", () => {
+                  // Remove active class from all buttons
+                  filterButtons.forEach((btn) => btn.classList.remove("active"));
+                  button.classList.add("active");
+      
+                  const category = button.getAttribute("data-filter");
+                  portfolioItems.forEach((item) => {
+                      if (category === "all" || item.getAttribute("data-category") === category) {
+                          item.style.display = "block";
+                          setTimeout(() => item.classList.add("fade-in"), 100);
+                      } else {
+                          item.classList.remove("fade-in");
+                          setTimeout(() => (item.style.display = "none"), 200);
+                      }
+                  });
+              });
+          });
+      });
+      
+      </script>
+
+
+
+
+
+      <section class="tech-tools">
+        <div class="tech-container">
+            <h2>Technologies & Tools We Use</h2>
+            <p>We leverage cutting-edge technologies to deliver the best solutions.</p>
+    
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="images/html_1051277 (1).png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="tech-item">
+                    <img src="images/css-3_732190 (1).png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="tech-item">
+                    <img src="images/js_5968292 (1).png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="tech-item">
+                    <img src="images/atom_4969244.png" alt="React">
+                    <p>React</p>
+                </div>
+                <div class="tech-item">
+                    <img src="images/icons8-nodejs-48.png" alt="Node.js">
+                    <p>Node.js</p>
+                </div>
+                <div class="tech-item">
+                    <img src="images/python_5968350.png" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="tech-item">
+                    <img src="images/figma_5968705.png" alt="Figma">
+                    <p>Figma</p>
+                </div>
+                <div class="tech-item">
+                    <img src="images/photoshop_5968520.png" alt="Photoshop">
+                    <p>Photoshop</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="case-studies">
+        <div class="case-container">
+            <h2>Our Case Studies</h2>
+            <p>Explore our in-depth project insights and problem-solving approaches.</p>
+    
+            <div class="case-scroll">
+                <div class="case-item">
+                    <div class="case-img">
+                        <img src="images/ecommerce.jpg" alt="Case Study 1">
+                    </div>
+                    <div class="case-content">
+                        <h3>Transforming E-Commerce</h3>
+                        <p>Revamped an online store, boosting conversions by 40%.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+    
+                <div class="case-item">
+                    <div class="case-img">
+                        <img src="images/saas-concept-collage.jpg" alt="Case Study 2">
+                    </div>
+                    <div class="case-content">
+                        <h3>Revolutionizing SaaS Platforms</h3>
+                        <p>Optimized UX and performance, increasing engagement by 60%.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+    
+                <div class="case-item">
+                    <div class="case-img">
+                        <img src="images/brand-branding-advertising-commercial-marketing-concept.jpg" alt="Case Study 3">
+                    </div>
+                    <div class="case-content">
+                        <h3>Brand Identity Success</h3>
+                        <p>Created a powerful brand identity that positioned a startup as an industry leader.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+    
+                <div class="case-item">
+                    <div class="case-img">
+                        <img src="images/ai.jpg" alt="Case Study 4">
+                    </div>
+                    <div class="case-content">
+                        <h3>AI-Powered Chatbot</h3>
+                        <p>Developed an AI chatbot that improved customer service efficiency by 70%.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="case-item">
+                    <div class="case-img">
+                        <img src="images/saas-concept-collage.jpg" alt="Case Study 2">
+                    </div>
+                    <div class="case-content">
+                        <h3>Revolutionizing SaaS Platforms</h3>
+                        <p>Optimized UX and performance, increasing engagement by 60%.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const caseItems = document.querySelectorAll(".case-item");
+        
+            caseItems.forEach((item) => {
+                const toggleBtn = item.querySelector(".toggle-btn");
+                const content = item.querySelector(".case-content");
+        
+                toggleBtn.addEventListener("click", function () {
+                    const isOpen = content.style.display === "block";
+        
+                    // Close all case studies
+                    document.querySelectorAll(".case-content").forEach((c) => (c.style.display = "none"));
+                    document.querySelectorAll(".toggle-btn").forEach((b) => (b.textContent = "+"));
+        
+                    // Toggle the selected one
+                    content.style.display = isOpen ? "none" : "block";
+                    toggleBtn.textContent = isOpen ? "+" : "−";
+                });
+            });
+        });
+        
+    </script>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-box">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to providing the best solutions for your business, focusing on innovation and excellence.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+      
+                <!-- Quick Links -->
+                <div class="footer-box">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Services -->
+                <div class="footer-box">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Contact -->
+                <div class="footer-box">
+                    <h3>Contact Us</h3>
+                    <p>📍 123 Street, City, Country</p>
+                    <p>📞 +123 456 7890</p>
+                    <p>📧 info@example.com</p>
+                </div>
+            </div>
+      
+            <!-- Copyright & Scroll to Top -->
+            <div class="footer-bottom">
+                <p>© 2025 Your Company. All rights reserved.</p>
+                <button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const scrollTopBtn = document.querySelector(".scroll-top");
+      
+          scrollTopBtn.addEventListener("click", function () {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+      });
+      
+      </script>
+</body>
+</html>
