@@ -629,7 +629,7 @@ font-size: 1.2rem;
     position: absolute;
     width: 80%;
     height: 80%;
-    background: url('images/map-overlay.png') no-repeat center;
+    /* background: url('images/23966.jpg') no-repeat center; */
     background-size: contain;
     opacity: 0.2;
     top: 10%;
@@ -756,6 +756,8 @@ font-size: 1.2rem;
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: relative;
+    z-index: 10; /* Ensure it is above other elements */
 }
 
 .slider-controls button {
@@ -944,8 +946,9 @@ font-size: 1.2rem;
 /* Footer Content Grid */
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
+    text-align: left;
 }
 
 /* Footer Boxes */
@@ -993,19 +996,27 @@ font-size: 1.2rem;
 /* Social Icons */
 .social-icons {
     margin-top: 15px;
+    display: flex;
+    gap: 10px;
 }
 
 .social-icons a {
-    display: inline-block;
     color: #fff;
     font-size: 1.3rem;
-    margin-right: 15px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
     transform: scale(1.2);
     color: #6a5acd;
+}
+
+/* Footer Map Styling */
+.footer-map iframe {
+    width: 100%;
+    height: 150px;
+    border: none;
+    border-radius: 8px;
 }
 
 /* Footer Bottom */
@@ -1033,10 +1044,10 @@ font-size: 1.2rem;
     background: #483d8b;
 }
 
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 900px) {
     .footer-content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
         gap: 30px;
     }
 }
@@ -1054,12 +1065,9 @@ font-size: 1.2rem;
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
 }
-
-
-
-
 
 
 
@@ -1070,7 +1078,7 @@ font-size: 1.2rem;
     /* padding-top: 50px;
     padding-bottom: 100px; */
     height: 90vh;
-    background-image: url(./images/portfolio_banner.avif);
+    background-image: url(./images/Dark\ Blue\ and\ White\ Simple\ Thesis\ Defense\ Presentation_page-0001.jpg);
     /* background: linear-gradient(135deg, violet, yellow, blue, green); */
     display: flex;
     background-repeat: no-repeat;
@@ -1147,21 +1155,25 @@ font-size: 1.2rem;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
+    z-index: 9999;
 }
+
 .video-container {
     position: relative;
     width: 80%;
     max-width: 800px;
 }
+
 .video-container iframe {
     width: 100%;
     height: 450px;
 }
+
 .close-video {
     position: absolute;
     top: -20px;
@@ -1169,10 +1181,12 @@ font-size: 1.2rem;
     background: red;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    z-index: 10000;
 }
+
 
 
 
@@ -1662,6 +1676,7 @@ font-size: 1.2rem;
 
 
 /* Our Team Section */
+/* 
 .unique-team {
     background: linear-gradient(to bottom, #0f172a, #1e293b);
     color: white;
@@ -1669,7 +1684,7 @@ font-size: 1.2rem;
     padding: 80px 10%;
 }
 
-/* Container */
+
 .team-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -1687,7 +1702,6 @@ font-size: 1.2rem;
     margin-bottom: 30px;
 }
 
-/* Team Wrapper */
 .team-wrapper {
     display: flex;
     justify-content: center;
@@ -1695,7 +1709,7 @@ font-size: 1.2rem;
     flex-wrap: wrap;
 }
 
-/* Individual Team Member */
+
 .team-member {
     position: relative;
     width: 280px;
@@ -1708,7 +1722,7 @@ font-size: 1.2rem;
     transform: translateY(-5px);
 }
 
-/* Team Image */
+
 .team-img {
     width: 100%;
     height: 280px;
@@ -1728,7 +1742,6 @@ font-size: 1.2rem;
     transform: scale(1.1);
 }
 
-/* Team Info */
 .team-info {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
@@ -1746,7 +1759,7 @@ font-size: 1.2rem;
     color: #cbd5e1;
 }
 
-/* Social Icons */
+
 .team-social {
     margin-top: 10px;
 }
@@ -1762,7 +1775,7 @@ font-size: 1.2rem;
     color: #facc15;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
     .team-wrapper {
         flex-direction: column;
@@ -1770,6 +1783,101 @@ font-size: 1.2rem;
     }
 
     .team-member {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+ */
+
+
+
+
+
+
+
+
+ /* State-of-the-Art Infrastructure Section */
+.state-of-the-art {
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+    padding: 80px 10%;
+}
+
+/* Container */
+.infra-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.infra-container h2 {
+    font-size: 2.5rem;
+    color: #ffde59;
+    margin-bottom: 10px;
+}
+
+.infra-container p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+/* Infrastructure Wrapper */
+.infra-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Infrastructure Item */
+.infra-item {
+    position: relative;
+    width: 280px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.infra-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Infrastructure Image */
+.infra-img {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+
+.infra-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.infra-item:hover .infra-img img {
+    transform: scale(1.1);
+}
+
+/* Infrastructure Title */
+.infra-item h3 {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    color: #ffde59;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .infra-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infra-item {
         width: 100%;
         max-width: 320px;
     }
@@ -3439,7 +3547,9 @@ font-size: 1.2rem;
     margin-bottom: 15px;
     color: #ffde59;
 }
-
+.blog-sidebar a{
+    color: white;
+}
 .blog-sidebar ul {
     list-style: none;
     padding: 0;
